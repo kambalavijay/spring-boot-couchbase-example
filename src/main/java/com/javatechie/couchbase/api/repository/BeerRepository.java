@@ -4,9 +4,10 @@ import org.springframework.data.couchbase.core.query.N1qlPrimaryIndexed;
 import org.springframework.data.couchbase.core.query.ViewIndexed;
 import org.springframework.data.couchbase.repository.CouchbaseRepository;
 
-import com.javatechie.couchbase.api.model.Customer;
+import com.javatechie.couchbase.api.model.Beer;
+
 @N1qlPrimaryIndexed
-@ViewIndexed(designDoc="customer",viewName="all")
-public interface CustomerRepository extends CouchbaseRepository<Customer, Integer>{
+@ViewIndexed(designDoc="beer-sample",viewName="all")
+public interface BeerRepository extends CouchbaseRepository<Beer, String>{
 
 }
